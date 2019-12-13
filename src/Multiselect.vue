@@ -263,6 +263,12 @@
       tabindex: {
         type: Number,
         default: 0
+      },
+      isDisabled: {
+        type: Function,
+        default: function (option) {
+          return true
+        }
       }
     },
     computed: {

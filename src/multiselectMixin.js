@@ -465,9 +465,6 @@ export default {
       return this.valueKeys.indexOf(opt) > -1
     },
 
-    isDisabled (option) {
-      return option.disabled
-    },
     /**
      * Returns empty string when options is null/undefined
      * Returns tag query if option is tag.
