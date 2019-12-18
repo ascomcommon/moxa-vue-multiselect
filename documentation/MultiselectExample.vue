@@ -9,6 +9,7 @@ div
     :multiple="true",
     :show-labels="false",
     :limit="3",
+    :is-inactive="isInactive",
     @tag="onTagging"
   )
     template(slot="option", slot-scope="props")
@@ -41,6 +42,9 @@ export default {
     onTagging (newTag) {
       this.source.push({ name: newTag, language: newTag })
       this.value.push({ name: newTag, language: newTag })
+    },
+    isInactive (option) {
+      return option.name.includes('G')
     }
   }
 }
