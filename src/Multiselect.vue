@@ -18,7 +18,7 @@
           <template v-for="option of visibleValues" @mousedown.prevent>
             <slot name="tag" :option="option" :search="search" :remove="removeElement">
               <span
-                :class="{'multiselect__tag':true, 'multiselect__option__disabled' :isDisabled(option)&&disableable }">
+                :class="{ 'multiselect__tag': true, 'multiselect__option_disabled': disableable && isDisabled(option) }">
                 <span v-text="getOptionLabel(option)"></span>
                 <i aria-hidden="true" tabindex="1" @keydown.enter.prevent="removeElement(option)"  @mousedown.prevent="removeElement(option)" class="multiselect__tag-icon"></i>
               </span>
@@ -266,7 +266,7 @@
       },
       isDisabled: {
         type: Function,
-        default: function (option) {
+        default: function () {
           return false
         }
       },
@@ -686,7 +686,7 @@ fieldset[disabled] .multiselect {
   color: white;
 }
 
-.multiselect__option__disabled{
+.multiselect__option_disabled{
   background: #000000;
 }
 
