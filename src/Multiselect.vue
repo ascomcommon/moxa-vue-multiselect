@@ -18,7 +18,7 @@
           <template v-for="option of visibleValues" @mousedown.prevent>
             <slot name="tag" :option="option" :search="search" :remove="removeElement">
               <span
-                :class="{ 'multiselect__tag': true, 'multiselect__option_inactive': disableable && isInactive(option) }">
+                :class="{ 'multiselect__tag': true, 'multiselect__option_inactive': option.isInactive }">
                 <span v-text="getOptionLabel(option)"></span>
                 <i aria-hidden="true" tabindex="1" @keydown.enter.prevent="removeElement(option)"  @mousedown.prevent="removeElement(option)" class="multiselect__tag-icon"></i>
               </span>
@@ -263,16 +263,6 @@
       tabindex: {
         type: Number,
         default: 0
-      },
-      isInactive: {
-        type: Function,
-        default: function () {
-          return false
-        }
-      },
-      disableable: {
-        type: Boolean,
-        default: true
       }
     },
     computed: {
