@@ -496,7 +496,7 @@ fieldset[disabled] .multiselect {
   border-radius: 5px;
   border: 1px solid #E8E8E8;
   background: #fff;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .multiselect__tag {
@@ -534,7 +534,7 @@ fieldset[disabled] .multiselect {
 .multiselect__tag-icon:after {
   content: "×";
   color: #266d4d;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .multiselect__tag-icon:focus,
@@ -665,7 +665,7 @@ fieldset[disabled] .multiselect {
   line-height: 40px;
   padding-right: 12px;
   padding-left: 20px;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .multiselect__option--highlight {
